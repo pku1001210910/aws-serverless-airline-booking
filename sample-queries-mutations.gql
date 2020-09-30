@@ -1,6 +1,15 @@
 ## Add a bunch of flights for December 2nd 2019 (year-month-day)
 ## auth user must be Admin
 
+mutation car1 {
+    createCar(input:{
+        name: "BMW",
+        speed: 80
+    }) {
+        id
+    }
+} 
+
 mutation flight1 {
     createFlight(input:{
         departureDate: "2020-09-29T08:00+0000",

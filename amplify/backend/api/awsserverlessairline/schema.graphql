@@ -1,3 +1,9 @@
+type Car@model(subscriptions: null) {
+    id: ID!
+    name: String!
+    speed: Int
+    owner: String
+}
 
 # Flight uses API authorization level
 # and fine-grained auth to only allow authenticated users to read flights

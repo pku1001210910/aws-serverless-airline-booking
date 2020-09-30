@@ -23,7 +23,7 @@ deploy: ##=> Deploy services
 	$(MAKE) deploy.shared-lambda-layers
 	$(MAKE) deploy.payment
 	$(MAKE) deploy.booking
-	$(MAKE) deploy.loyalty
+	# $(MAKE) deploy.loyalty
 ## Enable the deploy.perftest if you need to deploy the performance test stack
 #	$(MAKE) deploy.perftest 
 
