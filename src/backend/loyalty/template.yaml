@@ -203,6 +203,14 @@ Resources:
                   - execute-api:Invoke
                 # arn:aws:execute-api:region:account-id:api-id/stage/METHOD_HTTP_VERB/Resource-path
                 Resource: !Sub arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${LoyaltyApi}/*/*/*
+        - PolicyName: AmazonAPIGatewayPushToCloudWatchLogs
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:*
+                Resource:*
 
   AppsyncLoyaltyApiDataSource:
     Type: AWS::AppSync::DataSource
