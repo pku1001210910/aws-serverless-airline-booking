@@ -138,9 +138,9 @@ Resources:
       #   AllowHeaders:
       #     "'Content-Type,Authorization,X-Amz-Date'"
       #   MaxAge: "'600'"
-      AccessLogSetting:
-        DestinationArn: !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:${LoyaltyApiLogGroup}"
-        Format: '{ "requestId":"$context.requestId", "ip": "$context.identity.sourceIp", "caller":"$context.identity.caller", "user":"$context.identity.user","requestTime":"$context.requestTime", "httpMethod":"$context.httpMethod","resourcePath":"$context.resourcePath", "status":"$context.status","protocol":"$context.protocol", "responseLength":"$context.responseLength", "error": "$context.error.message", "user_arn": "$context.identity.userArn"}'
+      # AccessLogSetting:
+      #   DestinationArn: !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:${LoyaltyApiLogGroup}"
+      #   Format: '{ "requestId":"$context.requestId", "ip": "$context.identity.sourceIp", "caller":"$context.identity.caller", "user":"$context.identity.user","requestTime":"$context.requestTime", "httpMethod":"$context.httpMethod","resourcePath":"$context.resourcePath", "status":"$context.status","protocol":"$context.protocol", "responseLength":"$context.responseLength", "error": "$context.error.message", "user_arn": "$context.identity.userArn"}'
       MethodSettings:
         - MetricsEnabled: True
           ResourcePath: "/*"
